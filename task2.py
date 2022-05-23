@@ -28,9 +28,10 @@ class YaUploader:
 
 if __name__ == '__main__':
     PATH = os.getcwd()
-    DIR = 'new/files'
+    DIR = 'new'
+    DIR_1 = 'files'
     FILE = 'test.txt' # Не придумал ничего лучше чем разбить отдельно директории и имя файла, которое и указывается для params Я.Диска, надеюсь это корректно.
-    path_to_file = os.path.join(PATH, DIR, FILE)
+    path_to_file = os.path.join(PATH, DIR, DIR_1, FILE)
     token = ''
     uploader = YaUploader(token)
     result = uploader.upload_file('/'+FILE, path_to_file)
